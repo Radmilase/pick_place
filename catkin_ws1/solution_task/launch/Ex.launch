@@ -1,0 +1,5 @@
+<launch> 
+    <!-- Start Nodes -->
+    <node name="example_node" pkg="solution_master" type="example.py" output="screen"></node>
+</launch>
+

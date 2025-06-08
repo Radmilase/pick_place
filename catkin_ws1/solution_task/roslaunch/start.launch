@@ -1,0 +1,4 @@
+<launch> 
+    <!-- Start Nodes -->
+    <node name="example_node" pkg="solution_master" type="MEGAnoda2.py" output="screen"></node>
+</launch>

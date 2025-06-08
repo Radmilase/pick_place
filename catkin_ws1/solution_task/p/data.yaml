@@ -1,0 +1,13 @@
+train: /home/rad/master/p/train/images
+val: /home/rad/master/p/valid/images
+test: /home/rad/master/p/test/images
+
+nc: 2
+names: ['object', 'tetra']
+
+roboflow:
+  workspace: university-d2l2p
+  project: yolov5-wcd3q
+  version: 2
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/university-d2l2p/yolov5-wcd3q/dataset/2
