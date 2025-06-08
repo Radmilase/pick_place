@@ -1,0 +1,8 @@
+prefix=/home/rad/robot_programming/catkin_ws/devel
+
+Name: ur_perception
+Description: Description of ur_perception
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

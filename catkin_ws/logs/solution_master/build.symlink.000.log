@@ -1,0 +1,4 @@
+Symlinking /home/rad/catkin_ws/devel/lib/pkgconfig/solution_master.pc
+Symlinking /home/rad/catkin_ws/devel/lib/solution_master/example_node
+Symlinking /home/rad/catkin_ws/devel/share/solution_master/cmake/solution_masterConfig-version.cmake
+Symlinking /home/rad/catkin_ws/devel/share/solution_master/cmake/solution_masterConfig.cmake

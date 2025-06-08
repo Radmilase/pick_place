@@ -1,0 +1,8 @@
+prefix=/home/rad/robot_programming/catkin_ws/install
+
+Name: solution_master
+Description: Description of solution_master
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/rad/robot_programming/catkin_ws/devel/setup.sh

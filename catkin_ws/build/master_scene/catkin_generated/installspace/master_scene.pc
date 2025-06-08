@@ -1,0 +1,8 @@
+prefix=/home/rad/robot_programming/catkin_ws/install
+
+Name: master_scene
+Description: Description of master_scene
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

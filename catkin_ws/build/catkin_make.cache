@@ -1,0 +1,2 @@
+gazebo_grasp_plugin:master_scene:roboticsgroup_gazebo_plugins:robotiq_85_description:robotiq_85_simulation/robotiq_85_gazebo:robotiq_85_simulation/robotiq_85_simulation:solution_master:ur_description:ur_perception
+-DCATKIN_DEVEL_PREFIX=/home/rad/robot_programming/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rad/robot_programming/catkin_ws/install -G Unix Makefiles

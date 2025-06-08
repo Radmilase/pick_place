@@ -1,0 +1,3 @@
+Symlinking /home/rad/catkin_ws/devel/lib/pkgconfig/robotiq_85_description.pc
+Symlinking /home/rad/catkin_ws/devel/share/robotiq_85_description/cmake/robotiq_85_descriptionConfig.cmake
+Symlinking /home/rad/catkin_ws/devel/share/robotiq_85_description/cmake/robotiq_85_descriptionConfig-version.cmake

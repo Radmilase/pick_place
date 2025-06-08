@@ -1,0 +1,85 @@
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:[m[K In member function ‘[01m[Kvoid gazebo::GazeboGraspFix::OnUpdate()[m[K’:
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:571:58:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid ignition::math::v6::Matrix4<T>::Translate(const ignition::math::v6::Vector3<T>&) [with T = double][m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  571 |             worldToLink.Translate(currLinkWorldPose.Pos()[01;35m[K)[m[K;
+      |                                                          [01;35m[K^[m[K
+In file included from [01m[K/usr/include/ignition/math6/gz/math.hh:49[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Param.hh:33[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Element.hh:28[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Actor.hh:25[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:2[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Matrix4.hh:192:15:[m[K [01;36m[Knote: [m[Kdeclared here
+  192 |               [01;36m[KTranslate[m[K(const Vector3<T> &_t)
+      |               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:575:50:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid ignition::math::v6::Matrix4<T>::Translate(const ignition::math::v6::Vector3<T>&) [with T = double][m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  575 |             linkToContact.Translate(relContactPos[01;35m[K)[m[K;
+      |                                                  [01;35m[K^[m[K
+In file included from [01m[K/usr/include/ignition/math6/gz/math.hh:49[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Param.hh:33[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Element.hh:28[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Actor.hh:25[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:2[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Matrix4.hh:192:15:[m[K [01;36m[Knote: [m[Kdeclared here
+  192 |               [01;36m[KTranslate[m[K(const Vector3<T> &_t)
+      |               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:[m[K In member function ‘[01m[Kvoid gazebo::GazeboGraspFix::OnContact(ConstContactsPtr&)[m[K’:
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:742:28:[m[K [01;35m[Kwarning: [m[Kcomparison of integer expressions of different signedness: ‘[01m[Kint[m[K’ and ‘[01m[Kstd::vector<ignition::math::v6::Vector3<double> >::size_type[m[K’ {aka ‘[01m[Klong unsigned int[m[K’} [[01;35m[K-Wsign-compare[m[K]
+  742 |             for (int k=0; [01;35m[Kk<force.size()[m[K; ++k){
+      |                           [01;35m[K~^~~~~~~~~~~~~[m[K
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:757:54:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid ignition::math::v6::Matrix4<T>::Translate(const ignition::math::v6::Vector3<T>&) [with T = double][m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  757 |             worldToLink.Translate(linkWorldPose.Pos()[01;35m[K)[m[K;
+      |                                                      [01;35m[K^[m[K
+In file included from [01m[K/usr/include/ignition/math6/gz/math.hh:49[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Param.hh:33[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Element.hh:28[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Actor.hh:25[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:2[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Matrix4.hh:192:15:[m[K [01;36m[Knote: [m[Kdeclared here
+  192 |               [01;36m[KTranslate[m[K(const Vector3<T> &_t)
+      |               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:762:44:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid ignition::math::v6::Matrix4<T>::Translate(const ignition::math::v6::Vector3<T>&) [with T = double][m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  762 |             worldToContact.Translate(avgPos[01;35m[K)[m[K;
+      |                                            [01;35m[K^[m[K
+In file included from [01m[K/usr/include/ignition/math6/gz/math.hh:49[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Param.hh:33[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Element.hh:28[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Actor.hh:25[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:2[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Matrix4.hh:192:15:[m[K [01;36m[Knote: [m[Kdeclared here
+  192 |               [01;36m[KTranslate[m[K(const Vector3<T> &_t)
+      |               [01;36m[K^~~~~~~~~[m[K
+[01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:790:52:[m[K [01;35m[Kwarning: [m[K‘[01m[Kvoid ignition::math::v6::Matrix4<T>::Translate(const ignition::math::v6::Vector3<T>&) [with T = double][m[K’ is deprecated [[01;35m[K-Wdeprecated-declarations[m[K]
+  790 |             worldToObj.Translate(objWorldPose.Pos()[01;35m[K)[m[K;
+      |                                                    [01;35m[K^[m[K
+In file included from [01m[K/usr/include/ignition/math6/gz/math.hh:49[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Param.hh:33[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Element.hh:28[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/Actor.hh:25[m[K,
+                 from [01m[K/usr/include/sdformat-9.10/sdf/sdf.hh:2[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/Battery.hh:25[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/common/common.hh:8[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo_core.hh:19[m[K,
+                 from [01m[K/usr/include/gazebo-11/gazebo/gazebo.hh:20[m[K,
+                 from [01m[K/home/rad/catkin_ws/src/gazebo_grasp_plugin/src/GazeboGraspFix.cpp:2[m[K:
+[01m[K/usr/include/ignition/math6/gz/math/Matrix4.hh:192:15:[m[K [01;36m[Knote: [m[Kdeclared here
+  192 |               [01;36m[KTranslate[m[K(const Vector3<T> &_t)
+      |               [01;36m[K^~~~~~~~~[m[K

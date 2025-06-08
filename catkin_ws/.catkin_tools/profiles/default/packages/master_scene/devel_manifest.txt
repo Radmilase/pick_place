@@ -1,0 +1,4 @@
+master_scene
+/home/rad/catkin_ws/devel/.private/master_scene/lib/pkgconfig/master_scene.pc /home/rad/catkin_ws/devel/lib/pkgconfig/master_scene.pc
+/home/rad/catkin_ws/devel/.private/master_scene/share/master_scene/cmake/master_sceneConfig-version.cmake /home/rad/catkin_ws/devel/share/master_scene/cmake/master_sceneConfig-version.cmake
+/home/rad/catkin_ws/devel/.private/master_scene/share/master_scene/cmake/master_sceneConfig.cmake /home/rad/catkin_ws/devel/share/master_scene/cmake/master_sceneConfig.cmake

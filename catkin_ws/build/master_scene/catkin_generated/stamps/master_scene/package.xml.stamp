@@ -1,0 +1,22 @@
+<package format="2">
+  <version>1.0.0</version>
+  <name>master_scene</name>
+  <description>Simulation scene for yandex.ru/profi contest. Demo scene</description>
+
+  <author email="texnoman@itmo.com">TexnoMan</author>
+  <maintainer email="texnoman@itmo.com">TexnoMan</maintainer>
+
+  <license>MIT License</license>
+
+  <url type="website">https://gitlab.com/beerlab/iprofi2024</url>
+
+  <buildtool_depend>catkin</buildtool_depend>
+  <!-- <exec_depend>gazebo_ros</exec_depend> -->
+
+  <export>
+    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <gazebo_ros gazebo_media_path="${prefix}/models"/>
+</export>
+
+
+</package>

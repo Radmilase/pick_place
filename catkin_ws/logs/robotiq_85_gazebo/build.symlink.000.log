@@ -1,0 +1,3 @@
+Symlinking /home/rad/catkin_ws/devel/lib/pkgconfig/robotiq_85_gazebo.pc
+Symlinking /home/rad/catkin_ws/devel/share/robotiq_85_gazebo/cmake/robotiq_85_gazeboConfig-version.cmake
+Symlinking /home/rad/catkin_ws/devel/share/robotiq_85_gazebo/cmake/robotiq_85_gazeboConfig.cmake

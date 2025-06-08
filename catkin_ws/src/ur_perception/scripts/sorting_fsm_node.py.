@@ -1,0 +1,122 @@
+#!/usr/bin/env python3
+import rospy
+from std_msgs.msg import String
+import numpy as np
+
+# === ЗДЕСЬ ПОДСТАВЬ СВОИ УГЛЫ ДЛЯ ПОЗ (после измерения через joint_states) ===
+
+# Примерные углы для "домой" (нужно заменить на твои!)
+HOME_POSITION = np.array([
+    1.57,          # elbow_joint
+    -1.57,         # shoulder_lift_joint
+    0.0,           # shoulder_pan_joint
+    -1.57,         # wrist_1_joint
+    -1.57,         # wrist_2_joint
+    0.0            # wrist_3_joint
+])
+
+# Пример: позиция над банкой (заполни по результату joint_states)
+ABOVE_CAN = np.array([
+    1.2,           # elbow_joint
+    -1.2,          # shoulder_lift_joint
+    0.0,           # shoulder_pan_joint
+    -1.4,          # wrist_1_joint
+    -1.3,          # wrist_2_joint
+    0.0            # wrist_3_joint
+])
+
+# Пример: позиция над тетра-паком (заполни по результату joint_states)
+ABOVE_TETRAPAK = np.array([
+    1.1,           # elbow_joint
+    -1.0,          # shoulder_lift_joint
+    0.0,           # shoulder_pan_joint
+    -1.2,          # wrist_1_joint
+    -1.2,          # wrist_2_joint
+    0.0            # wrist_3_joint
+])
+
+# Координаты корзин (над ними!) — по результату rosservice call /gazebo/get_model_state
+TRASH_BLUE = np.array([0.7, 0.606, 0.25])     # x, y, z для can-can-left
+TRASH_ORANGE = np.array([0.7, -0.606, 0.25])  # x, y, z для can-can-right
+
+class SortingFSM:
+    def __init__(self):
+        rospy.init_node("sorting_fsm_node")
+        self.state = "WAIT_OBJECT"
+        self.detected_class = None
+
+        rospy.Subscriber("/detected_object", String, self.object_callback)
+        rospy.loginfo("[FSM] Started, waiting for object...")
+
+    def object_callback(self, msg):
+        if self.state == "WAIT_OBJECT":
+            self.detected_class = msg.data
+            rospy.loginfo(f"[FSM] Detected: {self.detected_class}")
+            if self.detected_class == "can":
+                self.state = "HANDLE_CAN"
+            elif self.detected_class == "tetra-pak":
+                self.state = "HANDLE_TETRAPAK"
+
+    def spin(self):
+        rate = rospy.Rate(10)
+        while not rospy.is_shutdown():
+            if self.state == "HANDLE_CAN":
+                self.handle_object(ABOVE_CAN, TRASH_BLUE)
+                self.state = "WAIT_OBJECT"
+            elif self.state == "HANDLE_TETRAPAK":
+                self.handle_object(ABOVE_TETRAPAK, TRASH_ORANGE)
+                self.state = "WAIT_OBJECT"
+            rate.sleep()
+
+    def handle_object(self, above_pos, trash_pos):
+        # Здесь вызывай свои функции управления манипулятором!
+        rospy.loginfo("[FSM] Moving above object")
+        self.go_to_joint(above_pos)
+        rospy.sleep(0.5)
+        self.open_gripper()
+        # Опустить к объекту (можно подправить второй сустав для чуть большей точности)
+        low_pos = above_pos.copy()
+        low_pos[1] -= 0.1
+        self.go_to_joint(low_pos)
+        rospy.sleep(0.5)
+        self.close_gripper()
+        rospy.sleep(0.5)
+        self.go_to_joint(above_pos)
+        rospy.sleep(0.5)
+        # Переместиться к корзине (координаты в XYZ)
+        self.go_to_cartesian(trash_pos)
+        rospy.sleep(0.5)
+        self.open_gripper()
+        rospy.sleep(0.5)
+        self.go_to_joint(HOME_POSITION)
+        rospy.sleep(1)
+
+    # ==== Ниже напиши свои команды управления ====
+    def go_to_joint(self, joint_positions):
+        rospy.loginfo(f"Двигаю манипулятор в позицию (joint): {joint_positions}")
+        # ТУТ ТВОЯ ФУНКЦИЯ управления суставами!
+        # self.arm.move_joints(joint_positions)
+        pass
+
+    def go_to_cartesian(self, xyz):
+        rospy.loginfo(f"Двигаю манипулятор в XYZ: {xyz}")
+        # ТУТ ТВОЯ ФУНКЦИЯ для движения в XYZ (если есть)
+        # self.arm.move_to(xyz)
+        pass
+
+    def open_gripper(self):
+        rospy.loginfo("Открываю хвататель")
+        # self.arm.open_gripper()
+        pass
+
+    def close_gripper(self):
+        rospy.loginfo("Закрываю хвататель")
+        # self.arm.close_gripper()
+        pass
+
+def main():
+    fsm = SortingFSM()
+    fsm.spin()
+
+if __name__ == "__main__":
+    main()

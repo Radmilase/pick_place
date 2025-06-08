@@ -1,0 +1,8 @@
+prefix=/home/rad/robot_programming/catkin_ws/devel
+
+Name: gazebo_grasp_plugin
+Description: Description of gazebo_grasp_plugin
+Version: 0.0.0
+Cflags: -I/home/rad/robot_programming/catkin_ws/src/gazebo_grasp_plugin/include
+Libs: -L${prefix}/lib -lgazebo_grasp_fix
+Requires: gazebo_ros geometry_msgs roscpp std_msgs
